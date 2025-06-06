@@ -17,8 +17,6 @@ export default async function handler(req, res) {
    if (!age || !weight || !weather) {
      return res.status(400).json({error:"나이(age), 몸무게(weight) 그리고 날씨(weather)가 필요합니다."});
    }
-//  const name = "하윤종"
-//  const birth = "1983-05-15"
 
   try {
     const today = new Date().toISOString().slice(0, 10);
